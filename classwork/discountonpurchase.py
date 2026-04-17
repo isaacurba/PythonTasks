@@ -10,19 +10,21 @@
 3. The output should display the discount amount if it meets the conditions and subtract from original price.
 """
 
-purchasedAmount = int(input("Enter your purchased amount to know your discount: "))
-discountPrice = 0
 
-if purchasedAmount >= 1000 and purchasedAmount <= 10000:
-    discountPrice = purchasedAmount * (5 / 100)
-elif purchasedAmount >= 10000 and purchasedAmount <= 50000:
-    discountPrice = purchasedAmount * (10 / 100)
-elif purchasedAmount >= 50000:
-    discountPrice = purchasedAmount * (20 / 100)
+
+
+purchased_amount = int(input("Enter your purchased amount to know your discount: "))
+
+if purchased_amount >= 1000 and purchased_amount <= 10000:
+    discount_price = purchased_amount * (5 / 100)
+elif purchased_amount >= 10000 and purchased_amount <= 50000:
+    discount_price = purchased_amount * (10 / 100)
+elif purchased_amount >= 50000:
+    discount_price = purchased_amount * (20 / 100)
 else:
     print("You don't have a discount")
     
-print(purchasedAmount - discountPrice)
+print(purchased_amount - discount_price)
 
 
 
