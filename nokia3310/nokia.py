@@ -1,6 +1,8 @@
 def main_menu(): # main menu
+    print("-----------------------------")
     print("----Welcome to nokia menu----")
-    print ("1. Phone book")
+    print("-----------------------------")
+    print("1. Phone book")
     print("2. Messages")
     print("3. Chat")
     print("4. Call register")
@@ -18,7 +20,9 @@ def main_menu(): # main menu
 ###############################################################################
 
 def phone_book(): # case 1 of main menu
+    print("-----------------------------")
     print("Phone Book")
+    print("-----------------------------")
     print("1. Search")
     print("2. Service No")
     print("3. Add name")	
@@ -32,7 +36,9 @@ def phone_book(): # case 1 of main menu
     print("0. Back") 
     
 def options(): # case 8 for phone book 
-    print("Phone Book")
+    print("-----------------------------")
+    print("Options")
+    print("-----------------------------")
     print("1. Type of view")
     print("2. Memory status")
     print("0. Back")
@@ -141,7 +147,7 @@ def settings(): # case 6 of main menu
     print("0. Back")
     
 def call_settings(): # case 1 for settings
-    print("Call settings"):
+    print("Call settings")
     print("1. Redial")
     print("2. Speed dial")
     print("3. Call waiting")
@@ -220,6 +226,75 @@ def sim_service(): # case 13 for main menu
 
 
 
+
+
+
+while True:
+    main_menu()
+    menu_option = int(input("Select an option from main menu: "))
+
+    match menu_option:
+        case 1:
+            while True: 
+                phone_book()
+                phone_book_option = int(input("Select an option from phone book: "))
+                
+                match phone_book_option:
+                    case 8:
+                        while True:
+                            options()
+                            options_option = int(input("Select from options: "))
+                            if options_option == 0:
+                                break 
+                    case 0:
+                        break 
+                    case _:
+                        print("No current available input")
+
+        case 2:
+            messages()
+            
+        case 3:
+            messages()
+            
+        case 4:
+            call_register()
+            
+        case 5:
+            tones()
+            
+        case 6:
+            settings()
+            
+        case 7:
+            call_divert()
+            
+        case 8:
+            games()
+            
+        case 9:
+            calculator()
+            
+        case 10:
+            reminder()
+            
+        case 11:
+            clock()
+            
+        case 12:
+            profiles()
+            
+        case 13:
+            sim_service()
+        
+                    
+        case 0:
+            break
+            
+        case _:
+            print("Invalid selction")
+
+print("Power off.......")
 
 
 
