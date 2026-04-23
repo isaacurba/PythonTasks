@@ -1,7 +1,10 @@
-"""
-UNDONE
-"""
 number = int(input("Enter any number to get the factorial: "))
-product = 1
-while number > 0:
+factorial = 1
+initial_number = 1
+while initial_number <= number:
+    factorial *= initial_number
+    initial_number+=1
+    
+print(factorial)
+    
     
