@@ -1,4 +1,9 @@
 def validate_email(email):
-    if "@" in email:
-        return True
-    return False
+    if "@" not in email and "." not in email:
+        return False
+    if len(email) < 8:
+        return False
+    return True
+        
+      
+

@@ -2,10 +2,11 @@ import unittest
 from validateemail import validate_email
 
 class test_validate_email_function(unittest.TestCase):
-    def test_that_string_has_email_at(self):
-        result = validate_email("isaac@urban")
-        self.assertTrue(result, "The email has an @ sign")
+    def test_that_string_has_email_at_sign(self):
+        result = validate_email("isaacurbancom")
+        self.assertFalse(result, "The email has an @ and . sign")
         
-if __name__    == '_main_':
-    unittest.main() 
+    def test_that_show_email_length_is_at_least_eight_characters(self):
+        result = validate_email("isaac@")
+        self.assertFalse(result, "email is greater than eight characters")
         
